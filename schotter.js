@@ -14,6 +14,8 @@ function draw() {
     for (let y = 0; y < 10; y++) {
 
       let offset;
+
+      // check prevents a NaN when x == 0
       if (x == 0) {
         offset = squareSize + map(random(1), 0, 1, -x * 5/3, x * 5/3);
       }
@@ -24,7 +26,7 @@ function draw() {
       push();
 
       // random rotation, in either direction
-      degrees = random(x / 30);
+      degrees = random(x / 15);
       if (random(1) > .5) {
         degrees = -degrees;
       }
@@ -32,7 +34,7 @@ function draw() {
       // use the x & y value to calculate where to draw on the canvas
       nX = x * squareSize + offset;
       nY = y * squareSize + offset;
-      console.log(nX, nY);
+
       translate(nX, nY);
 
       rotate(degrees);
@@ -43,4 +45,8 @@ function draw() {
     }
   }
   noLoop();
+}
+
+function mouseClicked() {
+  draw();
 }
