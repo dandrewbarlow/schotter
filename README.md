@@ -6,6 +6,7 @@ A p5.js attempt at Georg Nees' Schotter
 
 ### Images
 ![Without Color](img/plain.png)
-* without color
+* without color (`main` branch)
+
 ![With Color](img/color.png)
-* with color
+* with color (`color` branch)
