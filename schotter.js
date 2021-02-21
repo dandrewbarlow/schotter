@@ -48,5 +48,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  draw();
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    draw();
+  }
 }
