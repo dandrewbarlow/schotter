@@ -3,7 +3,7 @@ let squareSize = 50;
 
 function setup() {
   canvas = createCanvas(squareSize * 12, squareSize * 12);
-  noFill();
+  noStroke();
 }
 
 function draw() {
@@ -39,6 +39,7 @@ function draw() {
 
       rotate(degrees);
 
+      fill( color(random(255), random(255), random(255), 75 ) );
       square(0, 0, squareSize);
 
       pop();
@@ -48,5 +49,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  draw();
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    draw();
+  }
 }
